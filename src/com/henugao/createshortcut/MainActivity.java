@@ -20,19 +20,19 @@ public class MainActivity extends Activity {
 		intent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
 		
 		/**
-		 * 1 ÄãÏë¸ÉÊ²Ã´ÊÂÇé
-		 * 2 ½ĞÊ²Ã´Ãû×Ö
-		 * 3 ³¤Ê²Ã´Ñù×Ó
+		 * 1 è¦åšä»€ä¹ˆ
+		 * 2 å«ä»€ä¹ˆåå­—
+		 * 3 é•¿ä»€ä¹ˆæ ·å­
 		 */
 		
 		Intent dowhtIntent = new Intent();
-		//ÎÒÏë´òµç»°
+		//è¦åšä»€ä¹ˆ
 		dowhtIntent.setAction(Intent.ACTION_CALL);
 		dowhtIntent.setData(Uri.parse("tel://110"));
 		intent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, dowhtIntent);
-		//Ãû×Ö½Ğ×öÊ²Ã´
-		intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "´òµç»°");
-		//³¤Ê²Ã´Ñù×Ó
+		//å«ä»€ä¹ˆåå­—
+		intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "æ‰“ç”µè¯");
+		//é•¿ä»€ä¹ˆæ ·å­
 		intent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, R.drawable.ic_launcher);
 		
 		sendBroadcast(intent);
